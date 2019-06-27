@@ -6,4 +6,4 @@ if ! which ts; then
   echo "ts is not installed. Please apt install moreutils"
 fi
 
-$DIR/job.sh 2>&1|ts > $DIR/job.log
+$DIR/_job.sh 2>&1|ts > $DIR/job.log
