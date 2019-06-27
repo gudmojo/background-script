@@ -3,7 +3,7 @@ set -euxo pipefail
 
 ###############################################################################
 # This script is the outermost layer, called by the user.
-# It starts the job and puts it into the background.
+# It starts the job you define in job.sh and puts it into the background.
 ###############################################################################
 
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
