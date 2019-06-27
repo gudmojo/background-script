@@ -2,11 +2,13 @@
 set -euxo pipefail
 
 ###############################################################################
-# This script is the outermost layer, called by the user.
-# It starts the job and puts it into the background.
+# This script is the middle layer, it redirects all output to a log file.
 ###############################################################################
 
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-$DIR/_internals.sh &
-sleep 5
-disown
+
+if ! which ts; then
+  echo "ts is not installed. Please apt install moreutils"
+fi
+
+$DIR/job.sh 2>&1|ts > $DIR/job.log
