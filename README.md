@@ -1,12 +1,12 @@
 # background-script
-A script to run stuff in the background, even if you disconnect from the server
+A bash script to run stuff in the background, even if you disconnect from the server. Useful when `ssh` remoting into servers and executing long running commands
 
 Usage:
 
-1. apt install moreutils
-2. Modify job.sh to run any long-running commands you wish to execute
-3. ./run.sh
-4. View the output in job.log
+1. `apt install moreutils`
+2. Modify `job.sh` to run any long-running commands you wish to execute
+3. `./run.sh`
+4. View the output in `job.log`
 
 Advantages:
 
@@ -14,9 +14,8 @@ Advantages:
 
 Alternatives:
 
-- nohup
-- byobu
-- tmux
-- screen
-- disown (this script uses disown behind the scenes)
-
+- `nohup`
+- `byobu`
+- `tmux`
+- `screen`
+- `disown` (this script uses disown behind the scenes)
